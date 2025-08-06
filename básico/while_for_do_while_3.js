@@ -32,7 +32,7 @@ function alternativa_for(){
     }
 }
 
-function alternativa_do_whilte(){
+function alternativa_do_while(){
     let numero3 = 0;
 
     // execute pelo menos 1 vez mesmo que o valor de while seja false
