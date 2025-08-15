@@ -14,11 +14,14 @@ function perguntar(){
 }
 
 async function adivinhar(){
+
+    // Variáveis
     const max = 10;
     let adivinhe = Math.floor(Math.random() * max)
     let numero = await perguntar();
     let tentativa = 5;
 
+    // Bloco while
     while(numero !== adivinhe && tentativa > 0){
         tentativa = tentativa - 1
         if(tentativa === 0) break
@@ -26,12 +29,14 @@ async function adivinhar(){
         numero = await perguntar()
     }
 
+    // Bloco IF
     if(tentativa === 0 && numero !== adivinhe){
         console.log(`Acabou suas chances! O número era ${adivinhe}`);
     } else (
         console.log('Você acertou o número era', adivinhe)
     )
 
+    // Encerrar
     rl.close()
 }
 
